@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+# Un weighted graph implementation
 class Graph:
     def __init__(self, vertices):
         self.V = vertices
@@ -21,3 +22,4 @@ if __name__ == '__main__':
     g.addEdge(6, 4)
     g.addEdge(6, 7)
     print('Graph', g.G)
+    # o/p: {0: [1], 1: [2], 2: [3, 4], 3: [0], 4: [5], 5: [6], 6: [4, 7]}
