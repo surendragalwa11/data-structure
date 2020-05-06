@@ -79,7 +79,7 @@ if __name__ == '__main__':
     nodeValues = [1, 12, 6, 5, 9]
     for val in nodeValues:
         tree.add(val)
-    # traversla type 0: InOrder, 1: preOrder, 2: PostOrder
+    # traversal type 0: InOrder, 1: preOrder, 2: PostOrder
     # in order traversal
     tree.printTree()
     print('\n')
