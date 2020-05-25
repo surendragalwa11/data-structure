@@ -48,12 +48,38 @@ def printHuffmanCode(frequencies, hCode):
     for (char, freq) in frequencies:
         print(' %-4r |%12s' % (char, hCode[char]))
 
+def huffmanString(hCode, initialString):
+    toBeDecoded = ""
+    for ch in initialString:
+        toBeDecoded += hCode[ch]
+    return toBeDecoded
+
+def decodeHuffmanCode(root, s):
+    string = []
+    node = root
+    for char in s:
+        if type(node) is str:
+            string.append(node)
+            node = root
+        if char == '0':
+            node = node.left
+        elif char == '1':
+            node = node.right
+        # if leaf node
+        # if node.left is None and node.right is None:
+        #     string.append(node)
+        #     node = root
+    return ''.join(string)
+
 if __name__ == '__main__':
     string = 'BCAADDDCCACACAC'
     (huffmanT, frequencies) = huffmanTree(string)
     # pass root node
     hCode = huffmanCode(huffmanT[0][0])
-    # print
+    print(hCode)
     printHuffmanCode(frequencies, hCode)
+    huffmanCodeString = huffmanString(hCode, string)
+    decoded = decodeHuffmanCode(huffmanT[0][0], huffmanCodeString)
+    print(decoded)
 
 
