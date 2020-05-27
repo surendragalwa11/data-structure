@@ -1,9 +1,11 @@
+# normal recursion solution
 def recursiveFb(n):
     if n<=1:
         return n
     else:
         return recursiveFb(n-1) + recursiveFb(n-2)
 
+# dynamic programming approach, memorization
 def dpFibonacci(n):
     f = {}
     f[0] = 0
