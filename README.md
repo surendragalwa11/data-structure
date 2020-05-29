@@ -1,3 +1,3 @@
-## Data Strcuture & Algorithms
+## Data Structures & Algorithms
 
-This repository contains all the basic data structures, their implementations and examples.
+This repository contains all the basic data structures implementations and their use case examples.
